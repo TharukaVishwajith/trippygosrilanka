@@ -25,7 +25,7 @@ const blogPosts: BlogPost[] = [
         excerpt: "Discover the untouched coastlines and secret bays that make Sri Lanka a beach lover's paradise. From the south to the east, we guide you to the best spots.",
         category: "Travel Guide",
         date: "Nov 18, 2024",
-        image: "/assets/blog-beach.png",
+        image: "/assets/blog-beach.webp",
         readTime: "5 min read"
     },
     {
@@ -34,7 +34,7 @@ const blogPosts: BlogPost[] = [
         excerpt: "Step back in time and explore the ancient cities of Anuradhapura, Polonnaruwa, and Sigiriya. Uncover the rich history and architectural marvels.",
         category: "Culture",
         date: "Nov 15, 2024",
-        image: "/assets/blog-culture.png",
+        image: "/assets/blog-culture.webp",
         readTime: "7 min read"
     },
     {
@@ -43,7 +43,7 @@ const blogPosts: BlogPost[] = [
         excerpt: "Embark on a thrilling adventure in Yala and Wilpattu National Parks. Learn about the best times to spot leopards, elephants, and sloth bears.",
         category: "Wildlife",
         date: "Nov 10, 2024",
-        image: "/assets/blog-safari.png",
+        image: "/assets/blog-safari.webp",
         readTime: "6 min read"
     },
     {
@@ -52,7 +52,7 @@ const blogPosts: BlogPost[] = [
         excerpt: "From spicy curries to sweet treats, explore the diverse flavors of Sri Lanka. Don't miss out on trying Hoppers, Kottu, and fresh seafood.",
         category: "Food & Drink",
         date: "Nov 05, 2024",
-        image: "/assets/blog-beach.png", // Reusing image for demo
+        image: "/assets/blog-beach.webp", // Reusing image for demo
         readTime: "4 min read"
     },
     {
@@ -61,7 +61,7 @@ const blogPosts: BlogPost[] = [
         excerpt: "A complete guide to hiking one of Sri Lanka's most famous trails. Tips on the best time to go, what to pack, and how to get the best views.",
         category: "Adventure",
         date: "Oct 28, 2024",
-        image: "/assets/blog-culture.png", // Reusing image for demo
+        image: "/assets/blog-culture.webp", // Reusing image for demo
         readTime: "8 min read"
     },
     {
@@ -70,7 +70,7 @@ const blogPosts: BlogPost[] = [
         excerpt: "Catch your first wave at one of the world's best surf spots. We cover surf schools, board rentals, and the best breaks for beginners.",
         category: "Sports",
         date: "Oct 20, 2024",
-        image: "/assets/blog-safari.png", // Reusing image for demo
+        image: "/assets/blog-safari.webp", // Reusing image for demo
         readTime: "6 min read"
     }
 ];
