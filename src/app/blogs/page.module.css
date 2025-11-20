@@ -1,0 +1,145 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 20px 80px;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.category {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #f0f7ff;
+    color: #0066cc;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    align-self: flex-start;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.excerpt {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.date {
+    font-size: 0.875rem;
+    color: #888;
+    font-weight: 500;
+}
+
+.readMore {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: gap 0.2s ease;
+}
+
+.card:hover .readMore {
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 120px 20px 50px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

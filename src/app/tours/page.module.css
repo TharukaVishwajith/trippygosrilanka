@@ -1,0 +1,60 @@
+.main {
+    min-height: 100vh;
+    /* Removed padding-top to allow header background to extend to top */
+    background-color: var(--background-light);
+}
+
+.header {
+    background-color: var(--primary-dark);
+    color: #fff;
+    padding: 8rem 2rem 6rem;
+    /* Increased top padding for fixed header */
+    text-align: center;
+    margin-bottom: -3rem;
+    /* Overlap effect */
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+.noResults {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

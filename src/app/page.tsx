@@ -1,66 +1,59 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
+import TourCard from "@/components/TourCard";
+import BlogSection from "@/components/BlogSection";
 import styles from "./page.module.css";
+
+// Icons
+const PrivateIcon = () => (
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+    <circle cx="12" cy="7" r="4"></circle>
+  </svg>
+);
+
+const GroupIcon = () => (
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    <circle cx="9" cy="7" r="4"></circle>
+    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+  </svg>
+);
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className={styles.main}>
+      <Hero />
+
+      <section className={styles.cardsSection}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Choose Your Way to Explore Sri Lanka</h2>
+          <p className={styles.sectionSubtitle}>Whether you crave a personalized adventure or the camaraderie of a group, we have the perfect tour for you.</p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className={styles.grid}>
+          <TourCard
+            title="Private & Flexible Tours"
+            description="Your trip, your dates, perfect for couples, families, and friends who want private and flexibility."
+            imageSrc="/assets/image-2.png"
+            buttonText="Explore Private Tours"
+            icon={<PrivateIcon />}
+          />
+          <TourCard
+            title="Group Tours"
+            description="Fixed date adventures where you can meet fellow travelers and share amazing experiences."
+            imageSrc="/assets/image-3.png"
+            buttonText="Join Group Tour"
+            icon={<GroupIcon />}
+          />
         </div>
-      </main>
-    </div>
+      </section>
+
+      <BlogSection />
+
+      <footer className={styles.footer}>
+        <p>&copy; 2024 TrippyGo Sri Lanka. All rights reserved.</p>
+      </footer>
+    </main>
   );
 }
