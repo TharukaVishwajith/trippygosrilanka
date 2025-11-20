@@ -58,3 +58,7 @@ Thumbs.db
 
 # Turbo
 .turbo
+
+# Large assets (use optimized versions instead)
+public/assets/blog-*.png
+public/assets/hero-bg.jpg
