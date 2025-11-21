@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TrippyGo Sri Lanka
+
+A Next.js site for showcasing tours and travel stories. Blog content is now managed through [Sanity](https://www.sanity.io/) with an embedded Studio at `/studio`.
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Copy environment variables and update them with your project details
+
+```bash
+cp .env.example .env.local
+```
+
+- `NEXT_PUBLIC_SANITY_PROJECT_ID`: Sanity project ID
+- `NEXT_PUBLIC_SANITY_DATASET`: Dataset name (e.g., `production`)
+- `NEXT_PUBLIC_SANITY_API_VERSION`: API version date
+- `SANITY_READ_TOKEN`: Optional token for private datasets or draft access
+
+3. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Open [http://localhost:3000](http://localhost:3000) for the site
+- Open [http://localhost:3000/studio](http://localhost:3000/studio) for Sanity Studio
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content model
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Blog posts are defined by the `post` schema with fields for title, slug, excerpt, category, published date, read time, main image, and rich-text body. Add new posts directly in the Studio and they will appear on the `/blogs` page.
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The blog grid revalidates every 60 seconds to pick up fresh content.
+- Remote Sanity assets are allowed via `cdn.sanity.io` in `next.config.ts`.
