@@ -35,14 +35,12 @@ export default function Home() {
           <TourCard
             title="Private & Flexible Tours"
             description="Your trip, your dates, perfect for couples, families, and friends who want private and flexibility."
-            imageSrc="/assets/image-2.png"
             buttonText="Explore Private Tours"
             icon={<PrivateIcon />}
           />
           <TourCard
             title="Group Tours"
             description="Fixed date adventures where you can meet fellow travelers and share amazing experiences."
-            imageSrc="/assets/image-3.png"
             buttonText="Join Group Tour"
             icon={<GroupIcon />}
           />
