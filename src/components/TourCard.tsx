@@ -1,15 +1,13 @@
-import Image from 'next/image';
 import styles from './TourCard.module.css';
 
 interface TourCardProps {
     title: string;
     description: string;
-    imageSrc: string;
     buttonText: string;
     icon?: React.ReactNode;
 }
 
-export default function TourCard({ title, description, imageSrc, buttonText, icon }: TourCardProps) {
+export default function TourCard({ title, description, buttonText, icon }: TourCardProps) {
     return (
         <div className={styles.card}>
             <div className={styles.iconWrapper}>
